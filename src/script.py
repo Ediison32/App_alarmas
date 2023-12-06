@@ -23,7 +23,7 @@ def fechaActual():
 
 
 
-arduino = serial.Serial('COM6', 9600)  # Cambia 'COM6' al puerto del Arduino en tu sistema
+arduino = serial.Serial('COM6', 9600)  
 print("ARRANCA")
 
 def listen_to_arduino():
@@ -43,23 +43,6 @@ def listen_to_arduino():
         arduino.close()
 
     
-""" import serial
-
-# Especifica el puerto COM que estás utilizando
-puerto_com_arduino = 'COMX'  # Reemplaza 'X' con el número de tu puerto COM
-
-with serial.Serial(puerto_com_arduino, 9600, timeout=1) as ser:
-    while True:
-        # Lee una línea del puerto serie
-        linea = ser.readline().decode('utf-8').strip()
-        
-        # Si la línea contiene un estado (0 o 1)
-        if linea in ('0', '1'):
-            estado = int(linea)
-            print(f'Estado de la entrada digital: {estado}')
-
-            # Puedes agregar aquí más lógica según tus necesidades
- """
 
 if __name__ == '__main__':
     
